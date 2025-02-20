@@ -24,10 +24,10 @@ func main() {
 
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("/getUsers", h.GetUsers)
+		v1.GET("/users", h.GetUsers)
 	}
 
-	if err := r.Run(":8081"); err != nil {
+	if err := r.Run(":8080"); err != nil {
 		log.Fatal(err)
 	}
 }
